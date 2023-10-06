@@ -14,7 +14,7 @@ exports.findAll = async (req, res) => {
     logger.info("Found all users", result);
     // logger.log("Logger log", result);
   } catch (err) {
-    res.status(400).json({ status: false, message: err.message });
+    res.status(400).json({ status: false, data: err.message });
 
     console.log("Error finding all users", err.message);
   }
